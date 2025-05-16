@@ -1,0 +1,84 @@
+{
+  "info": {
+    "name": "Doctor Suggestion API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Doctor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Dr. Sharma\",\n  \"city\": \"Delhi\",\n  \"email\": \"dr.sharma@example.com\",\n  \"phone\": \"9876543210\",\n  \"speciality\": \"Orthopaedic\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/doctors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "doctors"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add Patient",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"city\": \"Delhi\",\n  \"email\": \"john@example.com\",\n  \"phone\": \"9876543211\",\n  \"symptom\": \"Arthritis\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/patients",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "patients"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Suggest Doctor",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/suggest-doctor/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "suggest-doctor",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
